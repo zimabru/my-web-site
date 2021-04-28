@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --clr-icons: #929292;
+  --clr-white: #fff;
+  --clr-bg-dark: #242424;
+  --clr-bg-light: #3b3b3b;
+  --clr-accent: #ff7600;
+  --br: 1.3rem;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+}
+
+header {
+  background-color: var(--clr-bg-dark);
+}
+
+header h1 {
+  position: absolute;
+  font-family: sans-serif;
+  color: var(--clr-white);
+  text-align: center;
+  font-size: clamp(3rem, 6vw, 10rem);
+}
+
+header .profil_frame {
+  cursor: pointer;
+  position: absolute;
+  height: 70%;
+  width: 60%;
+  background-color: transparent;
+  border-radius: var(--br);
+  left: 50%;
+  -webkit-transform: translate(-50%, 60%);
+          transform: translate(-50%, 60%);
+  z-index: 1;
+}
+
+header .profil_frame .profil {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--br);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.--black {
+  background-color: #242424;
+}
+
+.--white {
+  background-color: var(--clr-white);
+}
+
+main {
+  background-color: var(--clr-bg-light);
+}
+
+footer {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  background-color: var(--clr-bg-icons);
+}
+
+.svg__top--left {
+  position: absolute;
+  width: 10px;
+  fill: #ff7600;
+}
+
+.svg__pack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.svg {
+  position: absolute;
+  height: clamp(3rem, 6vw, 10rem);
+}
+
+.top__left {
+  left: 0;
+  fill: var(--clr-bg-dark);
+}
+
+.top__right {
+  right: 0;
+  fill: var(--clr-bg-dark);
+}
+
+.front {
+  position: relative;
+}
+
+.front .container .--black {
+  position: absolute;
+}
+
+.back {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+}
+
+.back .profil_infos {
+  -webkit-columns: 2;
+          columns: 2;
+  -webkit-column-rule: 1px solid rgba(255, 255, 255, 0.25);
+          column-rule: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.back .profil_info {
+  font-size: 1.125;
+  text-align: center;
+}
+
+.back .profil_info span {
+  font-size: .8rem;
+  display: block;
+}
+
+.background {
+  height: 200px;
+  width: 200px;
+  background: #234;
+  position: absolute;
+  background-color: red;
+  left: 0;
+  top: 0;
+  -webkit-transform: scale(10, 2);
+          transform: scale(10, 2);
+  border-radius: var(--br);
+}
+
+.card {
+  position: relative;
+  background-color: #ff7600;
+}
+/*# sourceMappingURL=style.css.map */
