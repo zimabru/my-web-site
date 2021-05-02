@@ -15,7 +15,7 @@
 
 body {
     font-family: "Lato", sans-serif;
-    font-size: clamp(1.3rem, 4vw, 10rem);
+    font-size: clamp(1.3rem, 2vw, 2rem);
     margin: 0;
 }
 
@@ -24,8 +24,14 @@ header {
     padding: 0;
 }
 
+.skill_name {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: bold;
+}
+
 .container {
-    width: 100%;
+    display: flex;
+    max-width: 100%;
     height: 500px;
 }
 
@@ -41,14 +47,10 @@ header {
     background-color: var(--clr-white);
 }
 
-main {
-    margin: 0;
-}
-
 //  here the SVG
 .svg {
     position: absolute;
-    height: clamp(3rem, 6vw, 10rem);
+    height: clamp(4rem, 6vw, 10rem);
 }
 
 .svg__pack {
@@ -86,6 +88,7 @@ img {
 }
 
 .card {
+    max-width: 600px;
     border: 0px;
     text-align: center;
     position: relative;
@@ -111,8 +114,10 @@ img {
     left: 0;
     right: 0;
     .infos {
+        font-weight: bold;
+        margin-top: 100px;
         columns: 2;
-        font-size: 1.4rem;
+        font-size: 2rem;
         text-align: center;
         margin-right: 8%;
         column-rule: 1px solid rgba(255, 255, 255, 0.25);
@@ -141,7 +146,7 @@ img {
     z-index: -1;
     opacity: 1;
     border-radius: var(--br);
-    transform: scale(.3, .4);
+    transform: scale(.2, .3);
     transition: transform 200ms cubic-bezier(.07, .3, .69, 1.2), opacity 100ms linear;
 }
 
@@ -208,17 +213,16 @@ footer {
 .part {
     position: absolute;
     text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    // font-size: 1.2rem;
+    line-height: clamps(1rem, 1vw, 2.4rem);
     font-family: "Lato", sans-serif;
-    bottom: 0;
+    bottom: -5%;
     transform: translateY(-50%);
 }
 
 //Here goes the first carousel
-.container_skill {
-    margin: 0;
-    padding: 0;
+.carousel-inner {
+    padding: 5;
 }
 
 .container {
@@ -233,27 +237,98 @@ footer {
 .carousel-item {
     height: 100%;
     width: 100%;
+    .container.--black {
+        color: var(--clr-white);
+        .paragraphe_title {
+            font-weight: 700;
+            margin: 7%;
+        }
+    }
+    .container.--white {
+        color: var(--clr-bg-dark);
+        .paragraphe_title {
+            font-weight: 700;
+            margin: 7%;
+        }
+    }
 }
 
-//carousel end
-// .part_2,
-// .part_3 {}
-.container.--black {
+.major {
+    position: absolute;
+    display: none;
+    z-index: 100;
+    font-size: clamp(3rem, 5vw, 16rem);
+}
+
+//here begin the desktop design
+@media (min-width:650px) {
+    .name__minor {
+        font-size: clamp(1rem, 6vw, 2.5rem)!important;
+        opacity: 0;
+    }
+    .major {
+        opacity: 1;
+        display: inline;
+        right: 15%;
+        top: 25%;
+        color: var(--clr-accent);
+    }
+    .card {
+        top: 27%;
+        left: 25%;
+        max-width: 400px;
+        transition: 250ms ease-in;
+    }
+    .carousel_image {
+        padding: 2% 17% 2% 17%;
+        margin-top: unquote("min(5vw, 2em)");
+        max-width: max-content;
+    }
+    .part {
+        position: absolute;
+        bottom: 0%;
+        right: 25%;
+        transition: 250ms ease-in;
+    }
+    .top__right {
+        opacity: 0;
+    }
+}
+
+.paragraphe_title {
+    font-size: 4rem;
+    margin: 5px 0;
+    color: rgb(218, 228, 236);
+}
+
+.text__control {
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.part_ {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.accent {
+    color: var(--clr-accent);
+}
+
+.white {
     color: var(--clr-white);
-    .paragraphe_title {
-        font-weight: 700;
-        margin: 7%;
-    }
 }
 
-.container.--white {
-    color: var(--clr-bg-dark);
-    .paragraphe_title {
-        font-weight: 700;
-        margin: 7%;
-    }
+i {
+    color: var(--clr-accent);
 }
 
-.container__skill.myskill {
-    margin-top: 5%;
+.body_skill {
+    color: rgb(218, 228, 236);
+}
+
+.skill__name {
+    color: var(--clr-accent);
 }
